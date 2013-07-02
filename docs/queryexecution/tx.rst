@@ -2,7 +2,7 @@
 Transaction Management System
 ******************************
 
-HYRISe uses optimistic concurrency control mechanisms to provide transactional
+HYRISE uses optimistic concurrency control mechanisms to provide transactional
 guarantees during query execution. However, currently HYRISE is only able to
 guarantee atomicity, consistency, and isolation but not durability since
 currently no logging is used to store the transactions on disk.
