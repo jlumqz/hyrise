@@ -47,12 +47,14 @@ BENCHMARK_F(TXBase, simple_commit) {
     auto ctx = txmgr.buildContext();
 
     access::InsertScan is;
+    is.setEvent("NO_PAPI");
     is.setTXContext(ctx);
     is.addInput(linxxxs);
     is.setInputData(one_row);
     is.execute();
 
     access::Commit c;
+    c.setEvent("NO_PAPI");
     c.addInput(linxxxs);
     c.setTXContext(ctx);
     c.execute();
